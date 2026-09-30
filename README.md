@@ -2,6 +2,8 @@
 
 ![Ghost Invasion](assets/ghost.png)
 
+Find reproducible bugs in your local test app with repeatable test journeys, clear failure evidence and replays you can run after a fix. Run repeatable browser tests with synthetic data, inspect reports and traces, and check your fix against the same test.
+
 Ghost Invasion runs deterministic Playwright journeys against an explicitly authorized disposable local app and records evidence. This skills-only Codex plugin bundles its real TypeScript runtime; it needs no private checkout, global CLI or MCP service. Version 0.2.0 is a review candidate, not an assertion of marketplace approval.
 
 ## Host requirements and installation
