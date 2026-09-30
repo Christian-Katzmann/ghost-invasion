@@ -1,0 +1,25 @@
+schemaVersion: "1.0"
+id: mobile-first-run
+name: Mobile first run
+description: First-session mobile flows under small screens, touch input, and slow network recovery.
+invariants:
+  - ux.mobile-first-run-completes
+  - ux.no-dead-end-after-error
+personas:
+  - mobile-new-user
+  - slow-network-user
+journeys:
+  - mobile-first-run
+  - mobile-signup-recovery
+  - slow-network-save-recovery
+evidenceRules:
+  - invariant: ux.mobile-first-run-completes
+    severity: medium
+    requiredEvidence:
+      - screenshot
+      - trace
+  - invariant: ux.no-dead-end-after-error
+    severity: medium
+    requiredEvidence:
+      - screenshot
+      - trace

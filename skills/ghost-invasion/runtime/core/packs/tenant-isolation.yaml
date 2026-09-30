@@ -1,0 +1,21 @@
+schemaVersion: "1.0"
+id: tenant-isolation
+name: Tenant isolation
+description: Cross-tenant and cross-account reads for authenticated apps with owned resources.
+invariants:
+  - auth.no-cross-tenant-read
+personas:
+  - permission-boundary-user
+  - tenant-a-user
+  - tenant-b-user
+journeys:
+  - cross-tenant-project-read
+  - direct-object-url-cross-tenant
+  - cross-account-api-read
+evidenceRules:
+  - invariant: auth.no-cross-tenant-read
+    severity: critical
+    requiredEvidence:
+      - network_response_body
+      - db_owner_check
+      - trace

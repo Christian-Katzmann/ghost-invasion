@@ -1,0 +1,19 @@
+{
+  "name": "ghost-invasion-local-runtime",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22",
+    "npm": ">=10"
+  },
+  "workspaces": [
+    "core"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace @ghost-invasion/core",
+    "test": "npm test --workspace @ghost-invasion/core",
+    "validate:schemas": "npm run validate:schemas --workspace @ghost-invasion/core"
+  }
+}

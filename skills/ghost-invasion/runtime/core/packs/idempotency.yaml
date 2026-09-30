@@ -1,0 +1,20 @@
+schemaVersion: "1.0"
+id: idempotency
+name: Idempotency
+description: Duplicate-submit, retry, and repeated-create checks for state-changing surfaces.
+invariants:
+  - mutation.idempotent-create
+personas:
+  - chaotic-user
+  - power-user
+  - slow-network-user
+journeys:
+  - double-click-save
+  - retry-create-after-timeout
+  - repeated-submit-with-same-input
+evidenceRules:
+  - invariant: mutation.idempotent-create
+    severity: critical
+    requiredEvidence:
+      - db_diff
+      - replay

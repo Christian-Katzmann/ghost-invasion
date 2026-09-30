@@ -1,0 +1,184 @@
+{
+  "$schema": "ghost-invasion/plan@1",
+  "createdAt": "2026-05-30T14:20:00Z",
+  "target": {
+    "baseUrl": "http://127.0.0.1:5173",
+    "stack": "manual",
+    "auth": "generic"
+  },
+  "mode": "quick",
+  "pack": "launch-readiness",
+  "seed": 1337,
+  "safety": {
+    "targetRisk": "local",
+    "hardStop": false,
+    "egress": {
+      "mode": "attach-only",
+      "proven": false,
+      "allowlist": [
+        "localhost",
+        "127.0.0.1"
+      ]
+    },
+    "liveSecrets": [],
+    "mocksApplied": [],
+    "dataReset": {
+      "strategy": "user-command",
+      "isolation": "user-reset",
+      "destructiveAllowed": true
+    },
+    "approvalRequired": false
+  },
+  "swarm": {
+    "browserConcurrency": 1,
+    "browserWaves": 1,
+    "totalBrowserSessions": 1,
+    "apiTier": {
+      "enabled": false,
+      "engine": "fetch",
+      "rps": 0,
+      "targets": []
+    },
+    "rateLimits": {
+      "rampMsPerContext": 750,
+      "circuitBreaker": "3%5xx|429"
+    }
+  },
+  "personas": [
+    {
+      "$schema": "ghost-invasion/persona@1",
+      "id": "chaotic-user",
+      "archetype": "impatient_user",
+      "role": {
+        "name": "visitor",
+        "authStrategy": "none",
+        "stateRef": null
+      },
+      "device": {
+        "preset": "Desktop Chrome",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "touch": false,
+        "scaleFactor": 1
+      },
+      "network": {
+        "profile": "slow-3g",
+        "downKbps": 400,
+        "upKbps": 400,
+        "latencyMs": 400
+      },
+      "patience": {
+        "actionTimeoutMs": 4000,
+        "maxWaitBeforeRageMs": 4000,
+        "giveUpAfterSteps": 3
+      },
+      "mistakePattern": {
+        "missThreshold": 0.18,
+        "doubleSubmit": 0.25,
+        "refreshMidFlow": 0.15,
+        "backDuringSave": 0.1
+      },
+      "timing": {
+        "thinkTimeMs": [
+          600,
+          2500
+        ],
+        "typeDelayMs": [
+          40,
+          160
+        ]
+      },
+      "dataState": {
+        "inputProfile": "realistic",
+        "recordCountBefore": 0,
+        "fixtureRef": "fixtures/new-account.json"
+      }
+    }
+  ],
+  "journeys": [
+    {
+      "$schema": "ghost-invasion/journey@1",
+      "id": "double-click-save",
+      "name": "EDIT ME: project creation duplicate-submit check",
+      "goal": "Impatient user double-clicks Create; app must not create two projects.",
+      "appliesToPersonas": [
+        "chaotic-user"
+      ],
+      "invariantsTested": [
+        "mutation.idempotent-create"
+      ],
+      "pristineRequired": true,
+      "anchors": {
+        "routes": [
+          "/projects/new"
+        ],
+        "mutations": [
+          "core.projects.create"
+        ],
+        "surfaceHash": "sha256:projectly-step-1-1"
+      },
+      "idealPath": [
+        "goto:/projects/new",
+        "fill:name=Launch plan",
+        "clickRole:button:Create"
+      ],
+      "steps": [
+        {
+          "type": "goto",
+          "url": "/projects/new"
+        },
+        {
+          "type": "fill",
+          "selector": "role=textbox[name=/name/i]",
+          "value": "Launch plan"
+        },
+        {
+          "type": "dbSnapshot",
+          "id": "before"
+        },
+        {
+          "type": "doubleSubmit",
+          "role": "button",
+          "name": "Create",
+          "gapMs": 80,
+          "cause": "ghost-injected"
+        },
+        {
+          "type": "wait",
+          "ms": 1500
+        },
+        {
+          "type": "dbSnapshot",
+          "id": "after"
+        }
+      ],
+      "success": [
+        {
+          "type": "expectDbDiff",
+          "table": "projects",
+          "where": {
+            "name": "Launch plan"
+          },
+          "expectInserted": 1
+        }
+      ],
+      "abandon": [
+        {
+          "type": "expectDbDiff",
+          "table": "projects",
+          "where": {
+            "name": "Launch plan"
+          },
+          "expectInserted": 1,
+          "negate": true,
+          "as": "failure",
+          "label": "Duplicate project created on double-click"
+        }
+      ]
+    }
+  ],
+  "surfaceHash": "sha256:projectly-step-1-1",
+  "approvedPlanHash": null
+}

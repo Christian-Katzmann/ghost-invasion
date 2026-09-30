@@ -1,0 +1,36 @@
+schemaVersion: "1.0"
+id: launch-readiness
+name: Launch readiness
+description: "Core launch risks: duplicate writes, private-data boundaries, and user recovery paths."
+invariants:
+  - mutation.idempotent-create
+  - auth.no-cross-tenant-read
+  - ux.no-dead-end-after-error
+personas:
+  - normal-new-user
+  - power-user
+  - mobile-new-user
+  - slow-network-user
+  - chaotic-user
+  - permission-boundary-user
+journeys:
+  - double-click-save
+  - cross-tenant-project-read
+  - slow-network-save-recovery
+evidenceRules:
+  - invariant: mutation.idempotent-create
+    severity: critical
+    requiredEvidence:
+      - db_diff
+      - replay
+  - invariant: auth.no-cross-tenant-read
+    severity: critical
+    requiredEvidence:
+      - network_response_body
+      - db_owner_check
+      - trace
+  - invariant: ux.no-dead-end-after-error
+    severity: medium
+    requiredEvidence:
+      - screenshot
+      - trace

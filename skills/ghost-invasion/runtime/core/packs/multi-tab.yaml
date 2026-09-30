@@ -1,0 +1,19 @@
+schemaVersion: "1.0"
+id: multi-tab
+name: Multi-tab consistency
+description: Concurrent tab, stale form, and conflict checks for shared mutable state.
+invariants:
+  - mutation.multi-tab-consistency
+personas:
+  - multi-tab-user
+  - power-user
+journeys:
+  - concurrent-tab-edit
+  - stale-tab-submit
+  - multi-tab-delete-and-save
+evidenceRules:
+  - invariant: mutation.multi-tab-consistency
+    severity: high
+    requiredEvidence:
+      - db_diff
+      - replay

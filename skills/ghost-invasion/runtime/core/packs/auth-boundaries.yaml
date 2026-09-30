@@ -1,0 +1,17 @@
+schemaVersion: "1.0"
+id: auth-boundaries
+name: Auth boundaries
+description: Permission and tenant-isolation checks for authenticated apps with owned resources.
+invariants:
+  - auth.no-cross-tenant-read
+personas:
+  - permission-boundary-user
+journeys:
+  - cross-tenant-project-read
+evidenceRules:
+  - invariant: auth.no-cross-tenant-read
+    severity: critical
+    requiredEvidence:
+      - network_response_body
+      - db_owner_check
+      - trace

@@ -1,0 +1,20 @@
+schemaVersion: "1.0"
+id: data-shapes
+name: Data shapes
+description: Required-field, rich-input, and readback checks for silent data loss or coercion.
+invariants:
+  - data.shape-preserved
+personas:
+  - power-user
+  - chaotic-user
+journeys:
+  - unicode-rich-input-roundtrip
+  - required-fields-readback
+  - import-shape-preserved
+evidenceRules:
+  - invariant: data.shape-preserved
+    severity: high
+    requiredEvidence:
+      - db_diff
+      - network_response_body
+      - replay

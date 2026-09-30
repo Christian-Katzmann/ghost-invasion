@@ -1,0 +1,42 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ghost-invasion",
+  "version": "0.2.0",
+  "description": "Find reproducible bugs in your local test app with repeatable test journeys, clear failure evidence and replays you can run after a fix.",
+  "author": {
+    "name": "Christian Katzmann"
+  },
+  "license": "MIT",
+  "keywords": [
+    "testing",
+    "playwright",
+    "local",
+    "replay"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Ghost Invasion",
+        "shortDescription": "Find bugs you can reproduce",
+        "longDescription": "Find bugs you can reproduce, then check your fix against the same test. Ghost Invasion runs repeatable browser test journeys against a disposable local app using synthetic data. It records reports, browser traces and state-change evidence so you can inspect what happened and replay the failure. The bundled test engine includes a demonstration that detects a known fault, reproduces it and checks a fixed version. Use only an explicitly approved, trusted local test app with fake data, never production or real accounts. Requires a local coding assistant, Node.js 22+, npm and Playwright Chromium on macOS or Linux. The test engine itself needs no paid model API calls.",
+        "developerName": "Christian Katzmann",
+        "category": "Developer Tools",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "defaultPrompt": [
+          "Use Ghost Invasion to run its disposable reviewer fixture and show the replay evidence."
+        ],
+        "composerIcon": "./assets/ghost.png",
+        "logo": "./assets/ghost.png",
+        "brandColor": "#14212D",
+        "websiteURL": "https://github.com/Christian-Katzmann/ghost-invasion",
+        "privacyPolicyURL": "https://github.com/Christian-Katzmann/ghost-invasion/blob/main/PRIVACY.md",
+        "supportURL": "https://github.com/Christian-Katzmann/ghost-invasion/blob/main/PRIVACY.md#publisher-and-contact"
+      }
+    }
+  },
+  "homepage": "https://github.com/Christian-Katzmann/ghost-invasion",
+  "repository": "https://github.com/Christian-Katzmann/ghost-invasion"
+}

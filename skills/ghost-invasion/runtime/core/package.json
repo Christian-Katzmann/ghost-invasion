@@ -1,0 +1,58 @@
+{
+  "name": "@ghost-invasion/core",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Safety-first fake-user invasion CLI for web apps.",
+  "license": "MIT",
+  "keywords": [
+    "playwright",
+    "web-testing",
+    "synthetic-users",
+    "security-testing",
+    "qa",
+    "cli"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christiankatzmann/ghost-invasion.git",
+    "directory": "core"
+  },
+  "homepage": "https://github.com/christiankatzmann/ghost-invasion#readme",
+  "bugs": {
+    "url": "https://github.com/christiankatzmann/ghost-invasion/issues"
+  },
+  "type": "module",
+  "bin": {
+    "ghost-invasion": "dist/ghost-invasion.js"
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist/",
+    "packs/",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && chmod +x dist/cli.js dist/ghost-invasion.js",
+    "prepack": "npm run build",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "validate:schemas": "npm run build && node dist/examples/validate-schemas.js"
+  },
+  "dependencies": {
+    "@auth/core": "0.41.3",
+    "ajv": "8.20.0",
+    "commander": "14.0.3",
+    "playwright": "1.56.1",
+    "yaml": "2.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.19",
+    "typescript": "5.9.3"
+  }
+}

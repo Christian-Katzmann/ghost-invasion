@@ -1,0 +1,392 @@
+{
+  "sourceRepository": "https://github.com/christiankatzmann/ghost-invasion",
+  "sourceCommit": "faf0e37c3d903d67a5fa4abb2fa498e1d2cfb6ea",
+  "sourceLicense": "MIT",
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "0624a46e3519e98c6aa9c7b759751c00e1e66a6576f3b9ee60295abb07654561"
+    },
+    {
+      "path": "core/LICENSE",
+      "sha256": "0624a46e3519e98c6aa9c7b759751c00e1e66a6576f3b9ee60295abb07654561"
+    },
+    {
+      "path": "core/package.json",
+      "sha256": "41c6c39a900c5c24ba986950ae98bce625dc7ad163b03a34b0616f553ed33850"
+    },
+    {
+      "path": "core/packs/auth-boundaries.yaml",
+      "sha256": "6fb71dad1ad1e65fc462b1f9fff536d674e54358e539c20ebec2a0374f3f66dd"
+    },
+    {
+      "path": "core/packs/data-shapes.yaml",
+      "sha256": "f5aa3312795d1d000375ab96515c6e0fb10031a8769a541cd1989cb324961dd7"
+    },
+    {
+      "path": "core/packs/idempotency.yaml",
+      "sha256": "5a20a4f1932f80e18fa775ebac118d82da3e964a369ee632fa001ee308aa0b45"
+    },
+    {
+      "path": "core/packs/launch-readiness.yaml",
+      "sha256": "6bd15709086fb4ed5db5bf39ac457f1f634f56f5739c771da90d46ecd592428c"
+    },
+    {
+      "path": "core/packs/mobile-first-run.yaml",
+      "sha256": "038dd1576e3c0399cf8741d74846b86c9e44b350ad278e7a9a23b793dffd3ff2"
+    },
+    {
+      "path": "core/packs/multi-tab.yaml",
+      "sha256": "df21e6f80a76d2bd9ad7a11008dbced2748008f6542157fc02507b8d5a84bf9e"
+    },
+    {
+      "path": "core/packs/tenant-isolation.yaml",
+      "sha256": "7af740c001fd2cc36c2981bc270bd208e2adb2f022c8194b7fbdcd35ed2b1904"
+    },
+    {
+      "path": "core/src/agent-memory.ts",
+      "sha256": "bc25ac172ac10b11312fea109328b4ef9d407514ad841a8272dc6a4ac3cdf3eb"
+    },
+    {
+      "path": "core/src/api-tier.ts",
+      "sha256": "ce799b016ef4b0cd1a1274737cc3f6d51cd116284d4ee9151a1ceec3f7fe8d07"
+    },
+    {
+      "path": "core/src/authjs-adapter.ts",
+      "sha256": "dd4433b9dffbe489cb50a0709a16779717f4c35d0a6e53ade00c1df27670f0c0"
+    },
+    {
+      "path": "core/src/classifier.ts",
+      "sha256": "a4ffa3d506bd0decc86534f026a2ae9866f1ee9492a1ec32fed13d05ac6bbbad"
+    },
+    {
+      "path": "core/src/clerk-adapter.ts",
+      "sha256": "561b064bbf14ffa280a7a23e4e9c0e3bdf6f056628548aa439442953a796e3b4"
+    },
+    {
+      "path": "core/src/cli.ts",
+      "sha256": "0cecc1d71a01328b2fbb360e8d4214c8d20c97d58bf85a99f7a03589ac83ccdb"
+    },
+    {
+      "path": "core/src/contracts.ts",
+      "sha256": "00efde7c2bec20ada7b3fe2302eea94aa1b0edb1fbb29c1f706288358ee88bbd"
+    },
+    {
+      "path": "core/src/cost-model.ts",
+      "sha256": "b75adcc46acd5911cbffe99f264ca8c4e3937cf6d91936bce3c1298c3fb6b5f5"
+    },
+    {
+      "path": "core/src/dashboard.ts",
+      "sha256": "ca67611e1614f1c4630d751b963f912d0a56d4d44f6f5037793a3681573fbce1"
+    },
+    {
+      "path": "core/src/discovery.ts",
+      "sha256": "d55388eef0fc1f5bdf11e9b345809dc265da0ef1aedcd115c73c8b652d01e630"
+    },
+    {
+      "path": "core/src/discovery/route-probe.ts",
+      "sha256": "76f738ca6e5ee6ac25256e7d64d0d261a226f3bbf6585623781e00c6bd776179"
+    },
+    {
+      "path": "core/src/egress.ts",
+      "sha256": "ff6491fa7cdca5438b8b3bd5fc89c9cc8fb53beb3c9bbc70bd23e13b54a916c4"
+    },
+    {
+      "path": "core/src/evidence.ts",
+      "sha256": "49e808c562f3ba15f531540fe388d2dafa58b389d332ba35c45ff2146dc0f651"
+    },
+    {
+      "path": "core/src/examples/schema-examples.ts",
+      "sha256": "827911ad45bc551681c4d086fec3342a2c49a61e8ff32df764458fcde44e15c0"
+    },
+    {
+      "path": "core/src/examples/validate-schemas.ts",
+      "sha256": "20da07b1e1214743a3e3c4fb82ae687f8c878f9554ee876626dd461de86f0ab4"
+    },
+    {
+      "path": "core/src/exit-code-policy.ts",
+      "sha256": "1438b89249cd8af5432772bc5595fec6936f228a7c1a2b9b4627ea7dff260983"
+    },
+    {
+      "path": "core/src/firebase-adapter.ts",
+      "sha256": "57c2d2c0076a6f594dca01c005cfc1bf89b9ca0731c352f5595f9191bbce4835"
+    },
+    {
+      "path": "core/src/fix.ts",
+      "sha256": "69617604659a964fd4362e67da65726f8ab64c85f3d08d23a462402dc44f95b0"
+    },
+    {
+      "path": "core/src/ghost-invasion.ts",
+      "sha256": "8ad1295b9ce6ee1dcac87a7783e264c4e29f4231767b903f11cce0fc7277cc27"
+    },
+    {
+      "path": "core/src/ghost-layout.ts",
+      "sha256": "fc416eb41b8bfac05df3a21f0f9be11d1430ea5c6e2d0d90722d50ac88cc2a43"
+    },
+    {
+      "path": "core/src/index.ts",
+      "sha256": "bfeadd7739236d9745ccd54bf181988cbde791a4ecea420577f5db052dcc317f"
+    },
+    {
+      "path": "core/src/local-boundary.ts",
+      "sha256": "8aebcc60604038e95aa5e19e9aea33cfeae081fd081e91ab7111781c5bfa8347"
+    },
+    {
+      "path": "core/src/local-host.ts",
+      "sha256": "fd7c38f52bc193e9db7573faec43939d8da39477759482c957e66020dd734a80"
+    },
+    {
+      "path": "core/src/localstripe.ts",
+      "sha256": "2720948751f2dcffcf304f0af23e42ee46ebd3525d7d8d72d80f6d68725f3e1d"
+    },
+    {
+      "path": "core/src/manual-config.ts",
+      "sha256": "73e57bbd292237497488f01657c83cdf53bbadec6bb36922d56fbbd6b7ca9f3b"
+    },
+    {
+      "path": "core/src/mcp-triage.ts",
+      "sha256": "7c3220ad35144619210f618adee660a28584b2eaf228227fbf7bea04093600c3"
+    },
+    {
+      "path": "core/src/memory-sizing.ts",
+      "sha256": "13e8e9a5d4b0549fe468fe10c18d3828f1390c89d7b3e2b946c765e2e8b73fda"
+    },
+    {
+      "path": "core/src/planner.ts",
+      "sha256": "9995dc3944abb456797fd858a436778df78001d230f1e0c63c89db85bce0def2"
+    },
+    {
+      "path": "core/src/redaction.ts",
+      "sha256": "9f16cd30de5a70522f0a4687a711c7ad8064ff99062f60d1dc6e3760e2225da3"
+    },
+    {
+      "path": "core/src/reporter.ts",
+      "sha256": "bfa0b3f1e4846f7cb65292749edf7e74df9b4734512c40fc724fa1847b98bfcc"
+    },
+    {
+      "path": "core/src/rss-watchdog.ts",
+      "sha256": "e34dbe840839e9a82bc56673f1498e71d18e54bf0806b67d2db4f2094ea66471"
+    },
+    {
+      "path": "core/src/run-gate.ts",
+      "sha256": "c75d90234941d99559017e8c0e0f9c2dcc130ab465829508077f1313e01872f2"
+    },
+    {
+      "path": "core/src/run-modes.ts",
+      "sha256": "1088adddb29ffd516f492820b0c50f34cef5f2e1ee3b62efa7c77cc4e4fa9c70"
+    },
+    {
+      "path": "core/src/safety.ts",
+      "sha256": "a2f03f9f3f732cea6478f3ece6db370aef8d9d9ac13436cb5fabbd0528a2316d"
+    },
+    {
+      "path": "core/src/schemas/finding.ts",
+      "sha256": "4cb6dfbcf9f3a848ec471c64117cae5a77c788846d4d934e63d6770427707fab"
+    },
+    {
+      "path": "core/src/schemas/ghost-plan.ts",
+      "sha256": "b041401d68f46d363ad869dab6fdbc4fdfb26fc354a9a5a25934f15256d5b476"
+    },
+    {
+      "path": "core/src/schemas/index.ts",
+      "sha256": "ed16ddbed8da966e1355633ebfc534ffb46a079716c4664713e6997737714340"
+    },
+    {
+      "path": "core/src/schemas/invariant.ts",
+      "sha256": "de2a2a7e7f8285aff758ce694f4811d39da12283f8770e34a438022bda6d9f94"
+    },
+    {
+      "path": "core/src/schemas/journey.ts",
+      "sha256": "1242d08bbfd4eeea56bdb7085a35a80f05fe53164b20aeb33560b4449b47d2d6"
+    },
+    {
+      "path": "core/src/schemas/json-schema.ts",
+      "sha256": "4ed16c1927d6e920d97789a71289aaf5627a091cb7131183262f14658f721ad8"
+    },
+    {
+      "path": "core/src/schemas/persona.ts",
+      "sha256": "053b00d52a4000b64d3cdae46c9d9e2aef0eceef159515033761601515c3a043"
+    },
+    {
+      "path": "core/src/schemas/repo-scan.ts",
+      "sha256": "7548482a75039aa39e6031e4e0bc34f80da1f47c79918e6e7f38bbda08f7c34b"
+    },
+    {
+      "path": "core/src/schemas/report.ts",
+      "sha256": "7db53306ee4db7cc59647e135f633e83c1f6b2b653d2c79c1be42fc2a5cb0b5b"
+    },
+    {
+      "path": "core/src/schemas/safety-verdict.ts",
+      "sha256": "9d83214dbf0f87858ad57c85335f7765dce29f2847a2199734ced5381dc65d6b"
+    },
+    {
+      "path": "core/src/schemas/surface.ts",
+      "sha256": "adf6fe783b7d6f5c5cd164385261913e3125f3ed30b1dcfc6fe2008cbeb72a3c"
+    },
+    {
+      "path": "core/src/seed.ts",
+      "sha256": "9348bb9ab4551cc594e2e71e096cc1cce2beb96768dc2de044563915125d1d1e"
+    },
+    {
+      "path": "core/src/severity-styles.ts",
+      "sha256": "e37c85266824ba7f9b401e330558f80e6d4f2ad2d537e0aed73ca5b8b1777a9f"
+    },
+    {
+      "path": "core/src/shrinker.ts",
+      "sha256": "451ec31c1fe10784e8aeb135c2f44efe7d203d680eeba2be87b5debc69e97e25"
+    },
+    {
+      "path": "core/src/supabase-adapter.ts",
+      "sha256": "aa8649bc10fd370a405857754c2272da5fd35309edec0f9885ac54cf7fe4243d"
+    },
+    {
+      "path": "core/src/swarm.ts",
+      "sha256": "bc5b1a3be67d600cead2907bf89683866615830d086a128c5ef0113371dd91bf"
+    },
+    {
+      "path": "core/test/agent-memory.test.mjs",
+      "sha256": "bc200b77ff3d4f2cdb3a3d739df556c10af2c3f0db21cbdf6313f3af90e207b6"
+    },
+    {
+      "path": "core/test/api-tier.test.mjs",
+      "sha256": "1071cec3503936691ca48374064c67770febfa07cbb264d7ae6e346348c6a4fc"
+    },
+    {
+      "path": "core/test/architecture-api-a11y.test.mjs",
+      "sha256": "796c4c3ccfee42af80d43833d46720b9712af002d8f3d863268e10933df5933e"
+    },
+    {
+      "path": "core/test/authjs-adapter.test.mjs",
+      "sha256": "309562189f52cd8c97209bf6d9241d28fbc36822db96d9aed255a867dbd05994"
+    },
+    {
+      "path": "core/test/classifier.test.mjs",
+      "sha256": "fc19cac5fabe03c97a4fb40aded82871b6ba4e99dd5ba0f0e097faf0390e03c0"
+    },
+    {
+      "path": "core/test/clerk-adapter.test.mjs",
+      "sha256": "29463e1fd86306e1a9b8e0f2eeb488974013f271d2bee79ae4a8938a7b67aefb"
+    },
+    {
+      "path": "core/test/contracts.test.mjs",
+      "sha256": "a6ba3c74e337f3a7439ad198fc191533da300d4dfe25d1b89392c424e98d0273"
+    },
+    {
+      "path": "core/test/cost-model.test.mjs",
+      "sha256": "65016c7c37f42dcb3a62bc4ffef2aca3a277f48af2a6a1cfee12a640b8bee80b"
+    },
+    {
+      "path": "core/test/dashboard.test.mjs",
+      "sha256": "a9dd8527205ea8a2f4845e99a2cff0d48045bc48d25a0c998d6a2a2f8d2f7562"
+    },
+    {
+      "path": "core/test/egress.test.mjs",
+      "sha256": "37bf9b3dcadea31f936c203a4f11788b836722c0df260176090970915efbeb32"
+    },
+    {
+      "path": "core/test/evidence-leak.test.mjs",
+      "sha256": "4d588cbed56148c57ed6dcc2913de1d35f8499bb9e26ace626a11022d2499fb7"
+    },
+    {
+      "path": "core/test/evidence.test.mjs",
+      "sha256": "d4f0520af0405bc95407f7fa40d7b8a3894ea42896472df230caf6dc5ed6d609"
+    },
+    {
+      "path": "core/test/exit-code-policy.test.mjs",
+      "sha256": "c766c81ca6dc9679a8dcf5e6c29a64814c0cc4efa0218945c4c77e100baa6643"
+    },
+    {
+      "path": "core/test/firebase-adapter.test.mjs",
+      "sha256": "dac017f02509348ce6786684eac1b5ebc46f6ad830dca3aeb103f29cb0fa04d0"
+    },
+    {
+      "path": "core/test/fix.test.mjs",
+      "sha256": "80010be2de753e5df4f2b273aa597a40447f982f0fab6f3dee9b774fdf11e26d"
+    },
+    {
+      "path": "core/test/local-boundary.test.mjs",
+      "sha256": "21240ab66964c6b2b79eba4d5050f64ec1d124e7f31dc8cc4d54b1a3ff5339d3"
+    },
+    {
+      "path": "core/test/localstripe.test.mjs",
+      "sha256": "4cf83eda844618459b19d28d2a956b36d881813c40668edbde0c5b56636c84c8"
+    },
+    {
+      "path": "core/test/manual-config.test.mjs",
+      "sha256": "f0c3c2a715721f311eaa01f3b05ecea20022e3cb252f2ebba65c475b4776a7bf"
+    },
+    {
+      "path": "core/test/mcp-triage.test.mjs",
+      "sha256": "56ccb4e005de8a48c8a707e35dc5bae6f55ea0c683cc9d3071a6d4fbbf6899e4"
+    },
+    {
+      "path": "core/test/planner.test.mjs",
+      "sha256": "47599625894c14730092996541422f6361cf3336afdd78f2328adc0fbc9e5298"
+    },
+    {
+      "path": "core/test/redaction.test.mjs",
+      "sha256": "99f796827a6a105c11ff24c98d8863331b6b1628537fb859e721dfbeb3fc3881"
+    },
+    {
+      "path": "core/test/reporter.test.mjs",
+      "sha256": "a8d3cda7273e4342f699b97a5cf913679f396ce421a9d277d552c33921f5382d"
+    },
+    {
+      "path": "core/test/run-modes.test.mjs",
+      "sha256": "59013033b435b63602d26f9c7eab072cd63827dc9223ab062247c8c5ade19112"
+    },
+    {
+      "path": "core/test/safety.test.mjs",
+      "sha256": "2c2fa6e9eb5318270f13caf27766c837420a81a85832d64ac437002a31d933ac"
+    },
+    {
+      "path": "core/test/seed.test.mjs",
+      "sha256": "5bb6410bf2a45d3d3dbd486684a8a020d78a4da9d04db3e227667d669947aed7"
+    },
+    {
+      "path": "core/test/shrinker.test.mjs",
+      "sha256": "70baada08c5f3ac08967baf7b84850770eb48609eee55469d7a2e961e1c0f852"
+    },
+    {
+      "path": "core/test/supabase-adapter.test.mjs",
+      "sha256": "ba221f6c5f06856389a67d73b6f4f006ab8950ae86a672a1d9ec5f8ec38b7f1d"
+    },
+    {
+      "path": "core/test/swarm.test.mjs",
+      "sha256": "bfa094337b62d2c5ee17493dcf1330235d2febb5925bf68d79062772099e9d65"
+    },
+    {
+      "path": "core/tsconfig.json",
+      "sha256": "6f96ab8929d89333fe6ee3dbdf9b2a09ae172c0d5ede220c3fb7716006f07366"
+    },
+    {
+      "path": "docs/local-review.md",
+      "sha256": "c542bd4e6074049d2d9d0b202903a4d14c34f6c255e19aca75fc72d87ad71060"
+    },
+    {
+      "path": "scripts/local-plan-template.json",
+      "sha256": "1895c94143b8fea4867d889708fd301ec3d07c0f38979cda131cac5bc6065d0e"
+    },
+    {
+      "path": "scripts/prepare-local-plan.mjs",
+      "sha256": "af610ee63e03c902a82b577773c78391eab642342cfff6f8dff5ecc6b654d50d"
+    },
+    {
+      "path": "scripts/reviewer-fixture.mjs",
+      "sha256": "1cd0819ebd9c23416e02d4c2d180ae0120b54cefb97155e76b3b61a65aa1d7ab"
+    },
+    {
+      "path": "tsconfig.base.json",
+      "sha256": "9e3eb2935349eeb2b97ae3939d2c5887b25ba6fd72328857b806ce072f2d2e87"
+    }
+  ],
+  "transforms": [
+    "core/package.json made private and direct dependencies pinned to committed upstream lock versions",
+    "minimal core-only workspace package.json added; lock generated for this package"
+  ],
+  "omittedUpstreamTests": [
+    "core/test/agent-wrapper.test.mjs",
+    "core/test/discovery.test.mjs"
+  ],
+  "reason": "Omitted tests require monorepo demo apps or installed agent skill wrappers; full upstream suite checked separately."
+}
